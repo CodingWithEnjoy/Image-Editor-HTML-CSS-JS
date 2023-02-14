@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ویرایشگر عکس - برنامه نویسی با لذت</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container disable">
+      <h2>ویرایشگر عکس</h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div class="filter">
+            <label class="title">فیلتر ها</label>
+            <div class="options">
+              <button id="brightness" class="active">روشنایی</button>
+              <button id="saturation">اشباع رنگ</button>
+              <button id="inversion">برعکس کردن رنگ</button>
+              <button id="grayscale">خاکستری</button>
+            </div>
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">روشنایی</p>
+                <p class="value">100%</p>
+              </div>
+              <input type="range" value="100" min="0" max="200" />
+            </div>
+          </div>
+          <div class="rotate">
+            <label class="title">چرخش</label>
+            <div class="options">
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button id="right">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+              <button id="horizontal">
+                <i class="bx bx-reflect-vertical"></i>
+              </button>
+              <button id="vertical">
+                <i class="bx bx-reflect-horizontal"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-img">
+          <img src="placeholder.jpg" alt="preview-img" />
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reset-filter">حذف فیلتر ها</button>
+        <div class="row">
+          <input type="file" class="file-input" accept="image/*" hidden />
+          <button class="choose-img">انتخاب عکس</button>
+          <button class="save-img">ذخیره کردن</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
